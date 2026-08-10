@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+torch
+torchvision
+pillow
+streamlit
+requests
+sentence-transformers
+faiss-cpu
+
+# ✅ NEW (for your agent)
+langchain==0.1.16
+langchain-google-genai
+google-generativeai
