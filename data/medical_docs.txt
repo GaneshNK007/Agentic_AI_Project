@@ -1,5 +1,74 @@
-Glioma is a type of tumor that occurs in the brain and spinal cord.
-Meningioma arises from the meninges surrounding the brain.
-Pituitary tumors affect hormone production.
-No tumor means no abnormal growth detected in MRI.
-Brain tumors may cause headaches, seizures, and vision problems.
+# ==============================================================================
+# CLINICAL KNOWLEDGE BASE & PRACTICE GUIDELINES FOR AGENTIC RAG SYSTEM
+# Referenced Guidelines:
+# - 2021 WHO Classification of Tumors of the Central Nervous System (WHO CNS5)
+# - AJCC Cancer Staging Manual (8th Edition) - Breast Cancer Sentinel Lymph Node Staging
+# - College of American Pathologists (CAP) Consensus Guidelines for Histopathology
+# - NCCN Clinical Practice Guidelines in Oncology: Central Nervous System Cancers
+# ==============================================================================
+
+# --- SECTION 1: NEURO-ONCOLOGY & BRAIN TUMOR PATHOLOGY (WHO CNS 2021) ---
+
+[WHO-CNS-GLIOMA-01] Gliomas are primary central nervous system (CNS) neoplasms originating from neuroglial stem or progenitor cells. Under the 2021 WHO Classification of Tumors of the Central Nervous System (WHO CNS5), diffuse gliomas are classified hierarchically into adult-type diffuse gliomas and pediatric-type gliomas, integrating histological morphology with essential molecular markers including IDH1/IDH2 mutation status and 1p/19q codeletion.
+
+[WHO-CNS-GLIOMA-02] Astrocytoma, IDH-mutant is graded as WHO CNS Grade 2, 3, or 4 based on histological features of atypia, mitotic activity, microvascular proliferation, and necrosis, or molecular features such as homozygous deletion of CDKN2A/B which confers a Grade 4 designation irrespective of histologic appearance.
+
+[WHO-CNS-GLIOMA-03] Glioblastoma, IDH-wildtype is classified as WHO CNS Grade 4 and represents the most aggressive primary malignant brain tumor in adults. Molecular diagnostic criteria require presence of TERT promoter mutation, EGFR gene amplification, or +7/-10 chromosome copy number changes in the context of an IDH-wildtype diffuse astrocytic glioma, even in the absence of histologic microvascular proliferation or palisading necrosis.
+
+[WHO-CNS-GLIOMA-04] Oligodendroglioma, IDH-mutant and 1p/19q-codeleted exhibits characteristic uniform round nuclei with clear perinuclear halos ("fried-egg" appearance) and delicate branching capillary vasculature ("chicken-wire" pattern). Both IDH gene mutation and whole-arm 1p/19q codeletion are biologically mandatory for this definitive diagnosis.
+
+[WHO-CNS-GLIOMA-05] Neuroimaging of high-grade gliomas on T1-weighted contrast-enhanced MRI typically demonstrates irregular thick peripheral ring-like enhancement surrounding a central hypointense necrotic core, accompanied by extensive surrounding vasogenic T2/FLAIR hyperintensity and significant mass effect.
+
+[WHO-CNS-MENINGIOMA-01] Meningiomas originate from specialized arachnoid cap cells of the arachnoid villi situated between the dura mater and arachnoid membranes. They represent the most common primary non-glial intracranial neoplasm, accounting for approximately 35-40% of all intracranial tumors in adult populations.
+
+[WHO-CNS-MENINGIOMA-02] The 2021 WHO classification stratifies meningiomas into three malignancy grades: Grade 1 (benign, ~80-85% of cases, including meningothelial, fibrous, and transitional subtypes), Grade 2 (atypical, characterized by >=4 mitoses per 10 HPFs or direct brain parenchymal invasion), and Grade 3 (anaplastic/malignant, >=20 mitoses per 10 HPFs, rhabdoid, or papillary histology).
+
+[WHO-CNS-MENINGIOMA-03] Brain MRI features of meningioma characteristically include a well-circumscribed, extra-axial dural-based mass that exhibits intense homogeneous gadolinium enhancement. A distinct linear tapering of thickened enhancing dura along the tumor margin, termed the "dural tail sign", is present in up to 72% of cases and serves as a classic pathognomonic diagnostic clue.
+
+[WHO-CNS-PITUITARY-01] Pituitary neuroendocrine tumors (PitNETs), historically designated as pituitary adenomas, originate from adenohypophyseal neuroendocrine cells within the sella turcica. They are clinically categorized by anatomical size as microadenomas (diameter <10 mm) or macroadenomas (diameter >=10 mm), and by endocrine hypersecretion status.
+
+[WHO-CNS-PITUITARY-02] Macroadenomas frequently exhibit suprasellar extension, causing progressive mass effect on the optic chiasm located immediately superior to the diaphragm sellae. This anatomic compression classically manifests clinically as bitemporal hemianopsia, cranial neuropathies (CN III, IV, VI), and hypopituitarism secondary to pituitary stalk compression.
+
+[WHO-CNS-PITUITARY-03] Pituitary adenoma neuroimaging on high-resolution sellar MRI displays a rounded sellar mass with expansion or remodeling of the sella floor. Microadenomas typically appear hypointense to normal pituitary gland on early dynamic post-contrast T1-weighted sequences, while macroadenomas show heterogeneous contrast uptake with possible cavernous sinus encasement.
+
+[WHO-CNS-NORMAL-01] Normal cranial brain MRI demonstrates symmetric intracranial structures with preservation of grey-white matter differentiation across cerebral hemispheres, cerebellum, and brainstem. Cerebral sulci, gyri, basal cisterns, and ventricular compartments display physiological morphology and CSF signal intensity without evidence of mass effect, midline shift, or pathological parenchymal signal alterations.
+
+[WHO-CNS-NORMAL-02] Absence of pathological intracranial contrast enhancement on T1-weighted post-gadolinium sequences confirms an intact blood-brain barrier (BBB). Normal physiological enhancement is restricted to dural venous sinuses, choroid plexuses, infundibular stalk, and pituitary gland parenchyma.
+
+# --- SECTION 2: DIGITAL PATHOLOGY & METASTATIC CANCER (AJCC 8TH EDITION / PCAM) ---
+
+[PCAM-HISTO-METASTATIC-01] Lymph node metastasis signifies the dissemination of malignant epithelial cells from a primary solid tumor (most commonly breast adenocarcinoma, melanoma, lung carcinoma, or gastrointestinal tract neoplasms) through afferent lymphatic channels into regional sentinel lymph nodes.
+
+[PCAM-HISTO-METASTATIC-02] Histopathological evaluation of hematoxylin and eosin (H&E) stained lymph node sections in the PatchCamelyon (PCam) benchmark focuses on identifying clusters of cohesive malignant epithelial cells within the subcapsular sinus, cortical lymphoid follicles, or interfollicular medullary parenchyma.
+
+[PCAM-HISTO-METASTATIC-03] Morphological hallmarks of metastatic carcinoma in lymph node tissue include loss of regular follicular architecture, marked nuclear pleomorphism, enlarged hyperchromatic nuclei, prominent eosinophilic nucleoli, abnormal mitotic figures, and surrounding stromal desmoplastic reaction.
+
+[PCAM-HISTO-METASTATIC-04] Under the AJCC 8th Edition TNM staging system for breast cancer, lymph node involvement is categorized by size: macrometastasis is defined as a tumor deposit measuring greater than 2.0 mm; micrometastasis is defined as a deposit measuring greater than 0.2 mm up to 2.0 mm (or containing >200 cells); and isolated tumor cells (ITCs) represent single tumor cells or small clusters measuring <=0.2 mm (or <=200 cells).
+
+[PCAM-HISTO-METASTATIC-05] Identification of macrometastatic tumor clusters in axillary sentinel lymph nodes upstages nodal status to at least pN1a. This critical finding fundamentally shifts clinical management, prompting recommendations for completion axillary lymph node dissection (ALND) or regional nodal irradiation, along with systemic adjuvant chemotherapy and targeted endocrine therapy.
+
+[PCAM-HISTO-NORMAL-01] Normal lymph node histopathology is characterized by well-demarcated capsular connective tissue, an intact patent subcapsular sinus, organized cortical B-cell lymphoid follicles with distinct germinal centers and mantle zones, a paracortical T-cell zone, and branching medullary cords and sinuses.
+
+[PCAM-HISTO-NORMAL-02] Normal lymphoid parenchyma displays small, mature, non-cohesive lymphocytes with round hyperchromatic nuclei and scant cytoplasm, interspersed with tingible-body macrophages and dendritic cells, completely devoid of cohesive atypical epithelial cellular aggregates or desmoplasia (pN0 category).
+
+# --- SECTION 3: IMMUNOHISTOCHEMISTRY (IHC) & CLINICAL BIOMARKERS ---
+
+[IHC-CNS-MARKERS-01] Glial Fibrillary Acidic Protein (GFAP) is an intermediate filament protein expressed predominantly in astrocytes and ependymal cells. Strong, diffuse GFAP immunoreactivity confirms glial lineage in primary brain tumors, assisting in distinguishing astrocytomas and glioblastomas from metastatic carcinomas and primary CNS lymphomas.
+
+[IHC-CNS-MARKERS-02] IDH1 R132H mutation-specific monoclonal antibody immunohistochemistry is the standard initial diagnostic screen for diffuse gliomas. Positive cytoplasmic staining denotes an IDH1-mutant glioma, which carries a significantly more favorable prognosis and altered therapeutic responsiveness compared to IDH-wildtype glioblastoma.
+
+[IHC-CNS-MARKERS-03] Ki-67 (MIB-1) labeling index provides a quantitative measure of cellular proliferation. Low-grade gliomas (Grade 2) and typical meningiomas (Grade 1) usually demonstrate a Ki-67 index <3-4%, whereas elevated Ki-67 indices (>10-20%) indicate high-grade aggressive behavior, elevated recurrence risk, and rapid tumor kinetics.
+
+[IHC-META-MARKERS-01] Broad-spectrum Cytokeratins (such as AE1/AE3 and CAM5.2) are epithelial-specific intermediate filaments. Positive cytokeratin IHC staining is the gold-standard confirmatory adjunct to highlight occult micrometastases and isolated tumor cells embedded within dense lymphoid tissue that are easily overlooked on routine H&E staining.
+
+[IHC-META-MARKERS-02] For metastatic adenocarcinoma of unknown or suspected breast origin, diagnostic IHC profiling includes Estrogen Receptor (ER), Progesterone Receptor (PR), and Human Epidermal Growth Factor Receptor 2 (HER2/neu), alongside GATA3 and Mammaglobin to guide precision targeted systemic therapy.
+
+# --- SECTION 4: CLINICAL TRIAGE, UNCERTAINTY & MULTIDISCIPLINARY ACTION PLANS ---
+
+[CLINICAL-TRIAGE-LOW-RISK] Low Clinical Risk finding indicates absence of malignant cellular proliferation or benign indolent histological architecture. Clinical recommendation: Routine clinical follow-up, scheduled non-emergent outpatient review, and symptom-directed surveillance without urgent surgical intervention.
+
+[CLINICAL-TRIAGE-MEDIUM-RISK] Medium Clinical Risk / Borderline Uncertainty finding occurs when model confidence is intermediate (e.g. 50-75%) or proximity to classification boundary is narrow. Clinical recommendation: Expedited secondary review by a board-certified subspecialist (neuroradiologist or neuropathologist), consideration of repeat thin-slice dynamic contrast imaging or deeper histopathologic sectioning with immunohistochemical stains (e.g., Cytokeratin AE1/AE3).
+
+[CLINICAL-TRIAGE-HIGH-RISK] High Clinical Risk finding denotes high-confidence detection of malignant intracranial neoplasia (Glioma, malignant Meningioma) or metastatic carcinoma in lymph node tissue. Clinical recommendation: Immediate expedited referral to a Multidisciplinary Tumor Board (MDT), urgent neurosurgical or surgical oncology evaluation, baseline metastatic staging scans, and preparation for biopsy/resection and adjuvant oncologic therapy.
+
+[CLINICAL-SAFETY-DISCLAIMER] The AI Diagnostic Assistant functions strictly as an adjunct computational decision-support tool (CDSS) designed to augment clinical workflow efficiency. System outputs, confidence metrics, and synthesized reports do not constitute independent medical diagnoses and must always be correlated with comprehensive patient clinical history and verified by certified medical practitioners.

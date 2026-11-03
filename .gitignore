@@ -1,0 +1,33 @@
+# Virtual Environments & Packages
+node_modules/
+dist/
+build/
+myenv_new/
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+
+# Environment & Secrets
+.env
+.env.*
+
+# Paper Drafts, Word Documents & Temporary Files
+paper_draft/
+paper_fig/
+paper_figures/
+*.docx
+*.doc
+*.zip
+PAPER_REVISION_ROADMAP.md
+~$*
+test.py
+
+# Large Deep Learning Model Weights (>100MB GitHub limit)
+*.keras
+backend/models/*.keras
+best_resnet50_finetuned.keras
+backend/models/best_resnet50_finetuned.keras
+backend/models/pcam.keras
+backend/models/best_pcam_resnet50_phase1_metastatic.keras

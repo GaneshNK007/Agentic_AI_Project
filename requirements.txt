@@ -3,6 +3,7 @@ uvicorn
 torch
 torchvision
 pillow
+keras>=3.0
 streamlit
 requests
 sentence-transformers
